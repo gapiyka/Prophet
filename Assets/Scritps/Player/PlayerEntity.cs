@@ -9,40 +9,60 @@ namespace Player
 
     public class PlayerEntity : MonoBehaviour
     {
-        [Header("Sprites")]
-        [SerializeField] private Sprite[] _horizontalSprites;
-        [SerializeField] private Sprite[] _verticalSprites;
-
         [Header("Movement")]
         [SerializeField] [Range(0f, 10f)] private float _speed;
-        [SerializeField] private Vector2 _faceDirection;
+        [SerializeField] private Animator _animator;
+        [SerializeField] private float _animationDelay;
 
-        private Rigidbody2D _rigidbody;// check interpolate
-        private SpriteRenderer _renderer;
-
-        private void Start()
-        {
-            _rigidbody = GetComponent<Rigidbody2D>(); // mb use serializefield
-            _renderer = GetComponent<SpriteRenderer>();
-            SetFaceDirection(_faceDirection);
-        }
+        private Rigidbody2D _rigidbody;
+        private bool _isMoving;
+        private bool _isJumping;
 
         public void Move(Vector2 direction)
         {
+            if (_isJumping)
+                return;
+
             SetFaceDirection(direction);
             Vector2 velocity = _rigidbody.velocity;
             velocity = direction * _speed; // what about <<v * Time.deltaTime>>
             _rigidbody.velocity = velocity;
         }
 
+        public void Jump()
+        {
+            if (!_isJumping)
+            {
+                SwitchJump(true);
+                StartCoroutine(Fall());
+            }
+        }
+
+        private void Start()
+        {
+            _rigidbody = GetComponent<Rigidbody2D>(); // mb use serializefield
+            SetFaceDirection(new Vector2(0f, 0f));
+            _isJumping = false;
+        }
+
+        private IEnumerator Fall()
+        {
+            yield return new WaitForSeconds(_animationDelay);
+            SwitchJump(false);
+        }
+
+        private void SwitchJump(bool state)
+        {
+            _isJumping = state;
+            _animator.SetBool("IsJumping", state);
+        }
+
         private void SetFaceDirection(Vector2 direction)
         {
-            int dirIndexX = (int)direction.x + 1;
-            int dirIndexY = (int)direction.y + 1;
-            Sprite sprite = (direction.x == 0f) ? 
-                _verticalSprites[dirIndexY] :
-                _horizontalSprites[dirIndexX];
-            _renderer.sprite = sprite;
+            _isMoving = (direction.magnitude > 0 && !_isJumping) ? true : false;
+            _animator.SetFloat("Horizontal", direction.x);
+            _animator.SetFloat("Vertical", direction.y);
+            _animator.SetBool("IsMoving", _isMoving);
         }
     }
 }

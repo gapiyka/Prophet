@@ -50,3 +50,6 @@ TagManager:
   - name: Misc
     uniqueID: 2537351407
     locked: 0
+  - name: Character
+    uniqueID: 3309896199
+    locked: 0

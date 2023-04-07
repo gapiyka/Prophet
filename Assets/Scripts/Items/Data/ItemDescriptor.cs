@@ -11,15 +11,15 @@ namespace Items.Data
     [field: SerializeField] public ItemType Type { get; private set; }
     [field: SerializeField] public Sprite ItemSprite { get; private set; }
     [field: SerializeField] public ItemRarity ItemRarity { get; private set; }
-    [field: SerializeField] public float Price { get; private set; }
+    [field: SerializeField] public float BuyPrice { get; private set; }
 
-    public ItemDescriptor(ItemId itemId, ItemType type, Sprite itemSprite, ItemRarity itemRarity, float price)
+    public ItemDescriptor(ItemId itemId, ItemType type, Sprite itemSprite, ItemRarity itemRarity, float buyPrice)
     {
       ItemId = itemId;
       Type = type;
       ItemSprite = itemSprite;
       ItemRarity = itemRarity;
-      Price = price;
+      BuyPrice = buyPrice;
     }
   }
 }

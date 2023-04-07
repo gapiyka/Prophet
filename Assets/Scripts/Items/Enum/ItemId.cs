@@ -8,5 +8,9 @@ namespace Items.Enum
     GreenFish = 3,
     BrownFish = 4,
     Octopus = 5,
+    LameFishingRod = 6,
+    AverageFishingRod = 7,
+    CoolFishingRod = 8,
+    AwesomeFishingRod = 9
   }
 }

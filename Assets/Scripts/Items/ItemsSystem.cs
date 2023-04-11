@@ -14,8 +14,9 @@ namespace Items
         private List<IItemRarityColor> _colors;
         private Dictionary<SceneItem, Item> _itemsOnScene;
         private LayerMask _whatIsPlayer;
+        private ItemsFactory _itemsFactory;
 
-        public ItemsSystem(List<IItemRarityColor> colors, LayerMask whatIsPlayer)
+        public ItemsSystem(List<IItemRarityColor> colors, LayerMask whatIsPlayer, ItemsFactory itemsFactory)
         {
             _sceneItem = Resources.Load<SceneItem>($"{nameof(ItemsSystem)}/{nameof(SceneItem)}");
             _itemsOnScene = new Dictionary<SceneItem, Item>();
@@ -25,12 +26,11 @@ namespace Items
             _transform = gameObject.transform;
             _colors = colors;
             _whatIsPlayer = whatIsPlayer;
+            _itemsFactory = itemsFactory;
         }
 
-        public void DropItem(ItemDescriptor descriptor, Vector2 position)
-        {
-            // TODO: Waiting for items and item factory
-        }
+        public void DropItem(ItemDescriptor descriptor, Vector2 position) =>
+            DropItem(_itemsFactory.CreateItem(descriptor), position);
 
         private void DropItem(Item item, Vector2 position)
         {

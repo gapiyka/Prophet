@@ -24,7 +24,7 @@ namespace Items
         
         private void DropRandomItem(ItemRarity rarity)
         {
-            List<ItemDescriptor> items = _itemsDescriptors.Where(item => item.ItemRarity == rarity).ToList();
+            List<ItemDescriptor> items = _itemsDescriptors.ToList();
             ItemDescriptor itemDescriptor = items[Random.Range(0, items.Count())];
             _itemsSystem.DropItem(itemDescriptor, _playerEntity.transform.position + Vector3.one);
         }

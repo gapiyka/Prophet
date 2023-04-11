@@ -52,7 +52,7 @@ namespace Items
             Debug.Log($"Item ({item.Descriptor.ItemId}) clicked, adding to inventory...");
             _itemsOnScene.Remove(sceneItem);
             sceneItem.ItemClicked -= TryPickItem;
-            Object.Destroy(sceneItem);
+            Object.Destroy(sceneItem.gameObject);
         }
     }
 }

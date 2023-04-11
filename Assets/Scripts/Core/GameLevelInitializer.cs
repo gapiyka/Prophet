@@ -16,7 +16,7 @@ namespace Core
     {
         [SerializeField] private PlayerEntity _playerEntity;
         [SerializeField] private UIInputHandler _gameUIInputView;
-        [SerializeField] private ItemRarityDescriptorsStorage _rarityDescriptorsStorage;
+        [SerializeField] private ItemRarityStorage _rarityDescriptorsStorage;
         [SerializeField] private LayerMask _whatIsPlayer;
         [SerializeField] private ItemsStorage _itemsStorage;
 

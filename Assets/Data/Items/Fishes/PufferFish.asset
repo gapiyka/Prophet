@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fishItemDescriptor:
     <ItemId>k__BackingField: 1
-    <Type>k__BackingField: 0
-    <ItemSprite>k__BackingField: {fileID: 0}
-    <ItemRarity>k__BackingField: 0
+    <Type>k__BackingField: 2
+    <ItemSprite>k__BackingField: {fileID: -1259608445, guid: 478355b4309d3644a893ad072f1ed6a3, type: 3}
+    <ItemRarity>k__BackingField: 3
     <BuyPrice>k__BackingField: 0
     <SellPrice>k__BackingField: 0
     <Saturation>k__BackingField: 0

@@ -12,4 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10eb517f60ef401e8fcf9894922ab87a, type: 3}
   m_Name: ItemsRarityStorage
   m_EditorClassIdentifier: 
-  <RarityDescriptors>k__BackingField: []
+  <RarityDescriptors>k__BackingField:
+  - <ItemRarity>k__BackingField: 3
+    <Sprite>k__BackingField: {fileID: -1259608445, guid: 478355b4309d3644a893ad072f1ed6a3, type: 3}
+    <Color>k__BackingField: {r: 1, g: 1, b: 1, a: 0}
+  - <ItemRarity>k__BackingField: 1
+    <Sprite>k__BackingField: {fileID: -1259608445, guid: 478355b4309d3644a893ad072f1ed6a3, type: 3}
+    <Color>k__BackingField: {r: 1, g: 1, b: 1, a: 0}
+  - <ItemRarity>k__BackingField: 4
+    <Sprite>k__BackingField: {fileID: -1259608445, guid: 478355b4309d3644a893ad072f1ed6a3, type: 3}
+    <Color>k__BackingField: {r: 1, g: 1, b: 1, a: 0}
+  - <ItemRarity>k__BackingField: 3
+    <Sprite>k__BackingField: {fileID: -1259608445, guid: 478355b4309d3644a893ad072f1ed6a3, type: 3}
+    <Color>k__BackingField: {r: 1, g: 1, b: 1, a: 0}
+  - <ItemRarity>k__BackingField: 5
+    <Sprite>k__BackingField: {fileID: -1259608445, guid: 478355b4309d3644a893ad072f1ed6a3, type: 3}
+    <Color>k__BackingField: {r: 1, g: 1, b: 1, a: 0}
+  - <ItemRarity>k__BackingField: 2
+    <Sprite>k__BackingField: {fileID: -1259608445, guid: 478355b4309d3644a893ad072f1ed6a3, type: 3}
+    <Color>k__BackingField: {r: 1, g: 1, b: 1, a: 0}
+  - <ItemRarity>k__BackingField: 0
+    <Sprite>k__BackingField: {fileID: -1259608445, guid: 478355b4309d3644a893ad072f1ed6a3, type: 3}
+    <Color>k__BackingField: {r: 1, g: 1, b: 1, a: 0}

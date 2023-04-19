@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1197769521134139744
 RectTransform:
   m_ObjectHideFlags: 0
@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 6688766676418394211}
   - component: {fileID: 6885839882522141105}
   - component: {fileID: 4019559152425013562}
+  - component: {fileID: 324459683119428588}
   m_Layer: 5
   m_Name: ItemSlot
   m_TagString: Untagged
@@ -198,3 +199,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &324459683119428588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8043626126306885500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23d08e21ece58b44965306b9c672372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemBack: {fileID: 4456706755061690252}
+  _emptyImage: {fileID: 6885839882522141105}
+  _icon: {fileID: 4456706755061690252}

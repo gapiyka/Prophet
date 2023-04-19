@@ -16,7 +16,7 @@ namespace UI.InventoryUI
 
         public List<ItemSlot> ItemSlots { get; private set; }
 
-        //[field: SerializeField] public Image MovingImage { get; private set; }
+        [field: SerializeField] public Image MovingImage { get; private set; }
 
         public event Action CloseClicked;
 

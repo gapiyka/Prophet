@@ -88,7 +88,7 @@ namespace UI
             return screenType switch
             {
                 ScreenType.Inventory =>
-                    new InventoryScreenPresenter(GetView<InventoryScreenView>(screenType),
+                    new InventoryScreenAdapter(GetView<InventoryScreenView>(screenType),
                     _data.Inventory, _data.RarityDescriptors),
                 _ => throw new NullReferenceException()
             };

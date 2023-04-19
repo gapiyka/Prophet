@@ -45,10 +45,10 @@ namespace Core
                 _externalDevicesInput
             };
             _playerSystem = new PlayerSystem(_playerEntity, _inputSources);
-
+            
             ItemsFactory itemsFactory = new ItemsFactory();
             List<IItemRarityColor> rarityColors = _rarityDescriptorsStorage.RarityDescriptors.Cast<IItemRarityColor>().ToList();
-            _itemsSystem = new ItemsSystem(rarityColors, _whatIsPlayer, itemsFactory);
+            _itemsSystem = new ItemsSystem(rarityColors, _whatIsPlayer, itemsFactory, _playerSystem.Inventory);
             List<ItemDescriptor> descriptors = _itemsStorage.ItemScriptables.Select(scriptable => scriptable.ItemDescriptor).ToList();
             _dropGenerator = new DropGenerator(descriptors, _playerEntity, _itemsSystem);
         }

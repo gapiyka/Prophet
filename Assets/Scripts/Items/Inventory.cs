@@ -64,7 +64,7 @@ namespace Items
             if (BackPackItems.All(slot => slot != null))
                 return false;
             var index = BackPackItems.IndexOf(null);
-            
+
             PlaceToBackPack(item, index);
             return true;
         }

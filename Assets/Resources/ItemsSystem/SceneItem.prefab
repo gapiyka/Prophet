@@ -458,7 +458,7 @@ MonoBehaviour:
   _button: {fileID: 5878939783463479605}
   _canvas: {fileID: 5878939783335395132}
   _itemTransform: {fileID: 5878939782464748277}
-  _dropAnimDuration: 0
-  _dropRotation: 0
-  _dropRadius: 0
+  _dropAnimDuration: 1
+  _dropRotation: 1
+  _dropRadius: 3
   <InteractionDistance>k__BackingField: 2

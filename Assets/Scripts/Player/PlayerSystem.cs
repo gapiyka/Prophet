@@ -16,6 +16,7 @@ namespace Player
             _playerBrain = new PlayerBrain(_playerEntity, inputSources);
 
             Inventory = new Inventory(null, null, _playerEntity.transform);
+            // TODO: replace null
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Items
 {
     public class Inventory
     {
-        public const int InventorySize = 20;
+        public const int InventorySize = 36;
         public List<Item> BackPackItems { get; }
         public FishingRod FishingRod { get; private set; }
 

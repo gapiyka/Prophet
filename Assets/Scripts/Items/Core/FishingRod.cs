@@ -8,7 +8,7 @@ namespace Items.Core
         private readonly FishingRodItemDescriptor _itemDescriptor;
         public FishingRodType FishingRodType { get; private set; }
 
-        public override int Amount => -1;
+        //public override int Amount => -1;
 
         public FishingRod(ItemDescriptor descriptor, FishingRodType type) : base(descriptor)
         {

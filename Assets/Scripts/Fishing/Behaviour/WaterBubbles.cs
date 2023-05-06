@@ -1,4 +1,5 @@
 using System.Collections;
+using Items.Enum;
 using UnityEngine;
 using Random = System.Random;
 
@@ -8,6 +9,7 @@ public class WaterBubbles : MonoBehaviour
     [SerializeField] private float _chanceToAppear;
     [SerializeField] private int _duration;
     [SerializeField] private int _appearInterval;
+    [SerializeField] private ItemRarity _fishRarity;
 
     private bool _showing;
     
@@ -15,6 +17,8 @@ public class WaterBubbles : MonoBehaviour
     {
         StartCoroutine("CheckAppear");
     }
+
+    public ItemRarity GetFishRarity() => this._fishRarity;
 
     private void Update()
     {

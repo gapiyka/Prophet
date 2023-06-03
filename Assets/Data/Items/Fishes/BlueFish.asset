@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 335b5bf3848342a1bebbcfa613fc932b, type: 3}
-  m_Name: PufferFish
+  m_Name: BlueFish
   m_EditorClassIdentifier: 
   _fishItemDescriptor:
-    <ItemId>k__BackingField: 1
+    <ItemId>k__BackingField: 2
     <Type>k__BackingField: 2
-    <ItemSprite>k__BackingField: {fileID: -1259608445, guid: 478355b4309d3644a893ad072f1ed6a3, type: 3}
-    <ItemRarity>k__BackingField: 2
+    <ItemSprite>k__BackingField: {fileID: 885728668, guid: 478355b4309d3644a893ad072f1ed6a3, type: 3}
+    <ItemRarity>k__BackingField: 3
     <BuyPrice>k__BackingField: 0
     <SellPrice>k__BackingField: 0
     <Saturation>k__BackingField: 0

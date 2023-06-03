@@ -86,6 +86,8 @@ namespace Items
                 FishingRod.Use();
             
             if (item is Fish fish) {
+                item.Use();
+                RemoveItem(item, false);
                 BackPackItems.Remove(item);
                 BackpackChanged?.Invoke();
             }
